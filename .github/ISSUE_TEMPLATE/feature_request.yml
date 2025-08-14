@@ -1,0 +1,26 @@
+name: Feature request
+description: Propose a new idea
+title: "[feat] <title>"
+labels: ["enhancement"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: One-line description
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      placeholder: Why, what, how
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: Web
+        - label: Mobile
+        - label: API
+        - label: Docs
