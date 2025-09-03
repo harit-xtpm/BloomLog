@@ -1,7 +1,7 @@
 <button
-  class="px-3 py-2 rounded-xl border"
+  class="btn-outline nav-btn"
   (click)="onClick($event)"
-  [ngClass]="{ 'bg-blue-600 text-white border-blue-600': active, 'bg-white hover:bg-slate-100': !active }"
+  [ngClass]="{ 'active': active }"
   [title]="text"
 >
   {{ text }}

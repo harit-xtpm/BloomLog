@@ -1,5 +1,5 @@
 <section class="space-y-3">
-  <div class="bg-white rounded-2xl p-4 shadow">
+  <div class="surface-card">
     <div class="font-bold text-lg mb-2">Export Wizard</div>
     <ol class="list-decimal ml-6 space-y-1">
       <ng-container *ngFor="let step of steps; let i = index">
@@ -7,8 +7,8 @@
       </ng-container>
     </ol>
     <div class="flex gap-2 mt-3">
-      <button class="px-3 py-2 rounded-xl border" (click)="onBackClick($event)">ย้อนกลับ</button>
-      <button class="px-3 py-2 rounded-xl bg-blue-600 text-white" (click)="onNextClick($event)">{{ current < steps.length - 1 ? 'ถัดไป' : 'สร้างรายงาน' }}</button>
+      <button class="btn-outline" (click)="onBackClick($event)">ย้อนกลับ</button>
+      <button class="btn-primary" (click)="onNextClick($event)">{{ current < steps.length - 1 ? 'ถัดไป' : 'สร้างรายงาน' }}</button>
     </div>
   </div>
 </section>

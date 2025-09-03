@@ -1,0 +1,10 @@
+.nav-btn {
+	&.active {
+		background: var(--color-primary);
+		color: #3e2a2a;
+		border-color: var(--color-primary-hover);
+	}
+	&:not(.active):hover {
+		background: var(--color-primary-soft);
+	}
+}

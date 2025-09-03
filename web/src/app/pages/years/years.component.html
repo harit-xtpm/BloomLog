@@ -1,17 +1,16 @@
 <section class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
   <ng-container *ngFor="let year of years">
-    <div class="bg-white rounded-2xl p-4 shadow">
+    <div class="surface-card">
       <div class="flex items-center justify-between" (click)="onOpenTimeline(year.id)">
         <div>
           <div class="font-bold text-lg">{{ year.label }}</div>
           <div class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded-full inline-block mt-1">{{ year.status }}</div>
         </div>
-        <button class="px-3 py-2 rounded-xl border" (click)="onExportYear(year.id)" *ngIf="year.status === 'Active'">Export</button>
+        <button class="btn-outline" (click)="onExportYear(year.id)" *ngIf="year.status === 'Active'">Export</button>
       </div>
     </div>
   </ng-container>
-
-  <div class="bg-white rounded-2xl p-4 shadow">
-    <button class="px-3 py-2 rounded-xl bg-blue-600 text-white">+ สร้างปีการศึกษาใหม่</button>
+  <div class="surface-card">
+    <button class="btn-primary">+ สร้างปีการศึกษาใหม่</button>
   </div>
 </section>
